@@ -450,9 +450,9 @@ TARGET_UPDATE = 100
 MAX_ITERATIONS = 500
 
 # n - number of targets
-n = 10
+n = 5
 # m - number of weapons
-m = 10
+m = 5
 assert n > 1
 
 lower_val = 25
@@ -470,7 +470,7 @@ target_net.eval()
 optimizer = optim.RMSprop(policy_net.parameters())
 memory = ReplayMemory(10000)
 
-num_episodes = 100
+num_episodes = 50
 # env.reset()
 # init_state = env.get_state()
 losses = []
@@ -493,7 +493,7 @@ for i_episode in range(1,num_episodes+1):
         if exploit:
           priority = get_error([transition], policy_net, target_net).item()
         else:
-          priority = abs(reward)
+          priority = abs(reward).cpu()
 
         # Store the transition in memory
         assert isinstance(transition, Transition)
