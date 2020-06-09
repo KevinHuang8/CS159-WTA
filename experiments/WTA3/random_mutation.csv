@@ -1,4 +1,4 @@
-"population_multiplier, offsprings_multiplier, result, reward, convergence_iter"
+population_multiplier,offsprings_multiplier,result,reward,convergence_iter
 5,5,2_4_17_8_1_18_5_10_7_12_3_19_13_15_11_6_9_14_16_0,943.237,5000
 5,10,19_6_11_9_13_10_3_17_7_12_18_14_2_0_4_15_8_5_16_1,937.955,5000
 5,15,11_14_17_15_6_8_12_13_2_5_18_4_16_10_0_7_0_4_6_9,769.975,731
